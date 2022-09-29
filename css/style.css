@@ -1,0 +1,120 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: aquamarine; }
+  .navigation__list {
+    display: flex;
+    list-style: none; }
+  .navigation__link, .navigation__link:active {
+    text-decoration: none;
+    padding: 1rem;
+    margin: 0 2rem; }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.1; }
+    .navigation__button:hover {
+      scale: 1.1; }
+  .navigation__icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    translate: 0, -50%;
+    width: 100%;
+    height: 2.5px;
+    background-color: #147b74;
+    transition: all 0.3s; }
+    .navigation__icon::after, .navigation__icon::before {
+      content: "";
+      position: absolute;
+      background-color: #147b74;
+      width: 3rem;
+      height: 2.5px;
+      transition: all 0.3s; }
+    .navigation__icon::after {
+      top: -0.9rem; }
+    .navigation__icon::before {
+      top: 0.9rem; }
+  .navigation__checkbox:checked ~ .navigation__button > .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked ~ .navigation__button > .navigation__icon::after {
+    rotate: 135deg;
+    top: 0; }
+  .navigation__checkbox:checked ~ .navigation__button > .navigation__icon::before {
+    rotate: 45deg;
+    top: 0; }
