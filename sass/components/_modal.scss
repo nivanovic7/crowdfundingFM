@@ -31,7 +31,6 @@
 
       &::after {
         position: static;
-        content: "sdlfknmsdfgk";
         color: rgba($modeate-cyan, 0.5);
         font-weight: 400;
         font-size: 1.6rem;
@@ -55,5 +54,31 @@
   }
 
   &__back-project {
+    position: relative;
+
+    .close-btn {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    & > div {
+      padding: 3rem;
+      border: 1px solid rgba($modeate-cyan, 0.5);
+      border-radius: 2rem;
+
+      &:nth-of-type(2) .heading--tertiary::after {
+        content: "Pledge $25 or more";
+      }
+
+      &:nth-of-type(3) .heading--tertiary::after {
+        content: "Pledge $50 or more";
+      }
+
+      &:nth-of-type(4) .heading--tertiary::after {
+        content: "Pledge $75 or more";
+      }
+    }
   }
 }
