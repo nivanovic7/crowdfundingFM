@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: aquamarine;
 
   &__list {
     display: flex;
@@ -15,10 +14,13 @@
   }
 
   &__link,
-  &__link:active {
+  &__link:active,
+  &__link:link {
     text-decoration: none;
     padding: 1rem;
     margin: 0 2rem;
+    color: white;
+    font-family: inherit;
   }
 
   //toggle btn

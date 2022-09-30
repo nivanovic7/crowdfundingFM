@@ -8,9 +8,9 @@
 @import "base/utilities";
 
 // @import "components/bg-video";
-// @import "components/button";
-// @import "components/card";
-// @import "components/composition";
+@import "components/button";
+@import "components/progress-bar";
+@import "components/card";
 // @import "components/feature-box";
 // @import "components/form";
 // @import "components/popup";
@@ -18,7 +18,7 @@
 
 // @import "layout/footer";
 // @import "layout/grid";
-// @import "layout/header";
+@import "layout/header";
 @import "layout/navigation";
 
 @import "pages/home";

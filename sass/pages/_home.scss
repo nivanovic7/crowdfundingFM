@@ -1,0 +1,48 @@
+.hero-img {
+  img {
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.section {
+  max-width: 60%;
+  padding: 4rem 5rem;
+  margin: auto;
+  background-color: white;
+  border-radius: 0.5rem;
+
+  &:not(body > .section) {
+    margin-top: 3rem;
+  }
+
+  &--data {
+    .data-wrap {
+      display: flex;
+    }
+
+    span {
+      display: block;
+    }
+
+    hr {
+      margin: 0 4rem;
+      width: 1px;
+      border: none;
+      background-color: $modeate-cyan;
+      opacity: 0.5;
+    }
+
+    input {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+body > .section {
+  position: relative;
+  margin-top: -15rem;
+  z-index: 10;
+}

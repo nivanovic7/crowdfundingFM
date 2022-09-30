@@ -1,1 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+body {
+  font-size: 1.6rem;
+  font-family: $default-font-family;
+  color: $dark-gray;
+}
+
+.heading--primary {
+  color: $black;
+}
+
+.heading--secondary {
+  color: $black;
+}
+
+.heading--tertiary {
+  color: $black;
+}
+
+.paragraph {
+  line-height: 3rem;
+}
+
+.span--big {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: $black;
+}
