@@ -174,27 +174,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .modal__card {
+  .modal__card--wrap {
     display: flex; }
-    .modal__card input {
+    .modal__card--wrap input {
       align-self: flex-start;
       margin-right: 2rem;
       position: relative;
       top: 0.5rem; }
-    .modal__card .heading--tertiary {
+    .modal__card--wrap .heading--tertiary {
       position: relative; }
-      .modal__card .heading--tertiary:hover {
+      .modal__card--wrap .heading--tertiary:hover {
         color: rgba(60, 180, 172, 0.5);
         cursor: pointer; }
-      .modal__card .heading--tertiary::after {
+      .modal__card--wrap .heading--tertiary::after {
         position: static;
         color: rgba(60, 180, 172, 0.5);
         font-weight: 400;
         font-size: 1.6rem; }
-      .modal__card .heading--tertiary span {
+      .modal__card--wrap .heading--tertiary span {
         position: absolute;
         right: 0; }
-        .modal__card .heading--tertiary span::after {
+        .modal__card--wrap .heading--tertiary span::after {
           content: "left";
           display: inline-block;
           position: relative;
@@ -202,8 +202,37 @@ body {
           margin-left: 0.5rem;
           color: rgba(60, 180, 172, 0.5);
           font-size: 1.4rem; }
+  .modal__card--extension {
+    border-top: 1px solid rgba(60, 180, 172, 0.5);
+    margin: 0 -3rem -3rem;
+    padding: 3rem;
+    display: flex;
+    align-items: center; }
+    .modal__card--extension .btn--donate {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 1rem;
+      cursor: pointer;
+      border: 1px solid rgba(60, 180, 172, 0.5);
+      padding: 1rem;
+      border-radius: 2.8rem; }
+      .modal__card--extension .btn--donate input {
+        width: 4rem;
+        border: 0;
+        outline: 0;
+        -moz-appearance: textfield;
+        text-align: center; }
+        .modal__card--extension .btn--donate input::-webkit-outer-spin-button, .modal__card--extension .btn--donate input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0; }
+    .modal__card--extension label {
+      display: block;
+      padding: 1rem 0; }
   .modal__back-project {
     position: relative; }
+    .modal__back-project > * {
+      margin-bottom: 3rem; }
     .modal__back-project .close-btn {
       position: absolute;
       top: 3rem;
