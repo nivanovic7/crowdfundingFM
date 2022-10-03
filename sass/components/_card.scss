@@ -12,6 +12,11 @@
       color: rgba($modeate-cyan, 0.5);
       font-weight: 400;
       font-size: 1.6rem;
+
+      @include respond(tab-port) {
+        left: 0;
+        top: 150%;
+      }
     }
   }
 
@@ -27,10 +32,20 @@
     content: "Pledge $75 or more";
   }
 
+  .paragraph {
+    margin-top: 5rem;
+  }
+
   &__data-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
 
     span {
       position: relative;

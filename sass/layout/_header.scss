@@ -1,9 +1,10 @@
 .header {
-  margin-top: -15rem;
-
   &__buttons {
     display: flex;
     justify-content: space-between;
+
+    @include respond(tab-port) {
+    }
   }
 
   &__logo {

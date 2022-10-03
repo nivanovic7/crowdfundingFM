@@ -9,15 +9,32 @@
     background-color: $modeate-cyan;
   }
 
+  &--back {
+    @include respond(tab-port) {
+      flex-grow: 1;
+      border-radius: 4rem;
+    }
+  }
+
   &--bookmark {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: $modeate-cyan;
-    border-radius: 2.8rem;
-    padding: 0 2.5rem 0 0;
+    padding: 0;
+    margin-left: 2rem;
 
-    img {
-      margin-right: 1rem;
+    @include respond(tab-port) {
+      border-radius: 50%;
+      padding: 0;
+    }
+
+    span {
+      margin: 0 2.5rem;
+
+      @include respond(tab-port) {
+        display: none;
+      }
     }
   }
 }

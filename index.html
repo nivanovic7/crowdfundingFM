@@ -175,7 +175,13 @@
     </div>
 
     <div class="hero-img">
-      <img src="./images/image-hero-desktop.jpg" alt="hero img" />
+      <picture>
+        <source
+          srcset="./images/image-hero-mobile.jpg"
+          media="(max-width: 56.25em)"
+        />
+        <img srcset="./images/image-hero-desktop.jpg" alt="hero img" />
+      </picture>
     </div>
     <header class="header section u-center-text">
       <h1 class="heading--primary u-margin-bottom-small">
@@ -187,10 +193,10 @@
       </p>
       <div class="header__buttons">
         <a href="#" class="btn btn--back u-flex-center">Back this project</a>
-        <a href="#" class="btn btn--bookmark"
-          ><img src="./images/icon-bookmark.svg " alt="bookmark icon" />
-          Bookmark</a
-        >
+        <a href="#" class="btn btn--bookmark">
+          <img src="./images/icon-bookmark.svg " alt="bookmark icon" />
+          <span>Bookmark</span>
+        </a>
         <img
           class="header__logo"
           src="./images/logo-mastercraft.svg"
