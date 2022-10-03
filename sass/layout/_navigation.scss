@@ -7,10 +7,54 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  z-index: 100;
+
+  &__logo {
+    @include respond(tab-port) {
+      z-index: 300;
+    }
+  }
+
+  &__nav {
+    @include respond(tab-port) {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      background-image: linear-gradient(to bottom, black 5%, transparent);
+      opacity: 0;
+      translate: 100% 0;
+      transition: all 0.2s;
+    }
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    translate: 0 0;
+  }
 
   &__list {
     display: flex;
     list-style: none;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 5rem;
+      border-radius: 1rem;
+    }
+  }
+
+  &__item {
+    @include respond(tab-port) {
+      &:not(:first-child) {
+        border-top: 1px solid $modeate-cyan;
+      }
+    }
   }
 
   &__link,
@@ -21,6 +65,14 @@
     margin: 0 2rem;
     color: white;
     font-family: inherit;
+
+    @include respond(tab-port) {
+      color: $dark-cyan;
+      padding: 2.5rem 1rem;
+      font-size: 2rem;
+      display: block;
+      font-weight: 700;
+    }
   }
 
   //toggle btn
@@ -34,9 +86,11 @@
     position: relative;
     cursor: pointer;
     transition: all 0.1;
+    display: none;
 
-    &:hover {
-      scale: 1.1;
+    @include respond(tab-port) {
+      display: block;
+      z-index: 300;
     }
   }
 
@@ -74,11 +128,14 @@
   }
 
   &__checkbox:checked ~ &__button > &__icon::after {
+    background-color: white;
     rotate: 135deg;
     top: 0;
   }
 
   &__checkbox:checked ~ &__button > &__icon::before {
+    background-color: white;
+
     rotate: 45deg;
     top: 0;
   }
