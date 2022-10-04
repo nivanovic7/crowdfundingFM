@@ -90,7 +90,7 @@
     height: 3rem;
     position: relative;
     cursor: pointer;
-    transition: all 0.1;
+    transition: all 0.2s;
     display: none;
 
     @include respond(tab-port) {
@@ -121,11 +121,11 @@
     }
 
     &::after {
-      top: -0.9rem;
+      top: -1rem;
     }
 
     &::before {
-      top: 0.9rem;
+      top: 1rem;
     }
   }
 

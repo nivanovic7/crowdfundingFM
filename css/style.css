@@ -156,10 +156,11 @@ body {
       color: rgba(60, 180, 172, 0.5);
       font-weight: 400;
       font-size: 1.6rem; }
-      @media only screen and (max-width: 56.25em) {
-        .card .heading--tertiary::after {
-          left: 0;
-          top: 150%; } }
+    @media only screen and (max-width: 56.25em) {
+      .card .heading--tertiary {
+        position: relative;
+        left: 0;
+        top: 150%; } }
   .card:nth-of-type(1) .heading--tertiary::after {
     content: "Pledge $25 or more"; }
   .card:nth-of-type(2) .heading--tertiary::after {
@@ -200,48 +201,66 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .modal__card--wrap {
+  .modal__card--wrap > div {
     display: flex; }
-    .modal__card--wrap input {
-      align-self: flex-start;
-      margin-right: 2rem;
-      position: relative;
-      top: 0.5rem; }
-    .modal__card--wrap .heading--tertiary {
+    .modal__card--wrap > div input {
+      margin-right: 3rem; }
+    .modal__card--wrap > div .heading--tertiary {
       position: relative; }
-      .modal__card--wrap .heading--tertiary:hover {
+      .modal__card--wrap > div .heading--tertiary:hover {
         color: rgba(60, 180, 172, 0.5);
         cursor: pointer; }
-      .modal__card--wrap .heading--tertiary::after {
-        position: static;
+      .modal__card--wrap > div .heading--tertiary::after {
         color: rgba(60, 180, 172, 0.5);
         font-weight: 400;
-        font-size: 1.6rem; }
-      .modal__card--wrap .heading--tertiary span {
-        position: absolute;
-        right: 0; }
-        .modal__card--wrap .heading--tertiary span::after {
-          content: "left";
-          display: inline-block;
-          position: relative;
-          translate: 0 -10%;
-          margin-left: 0.5rem;
-          color: rgba(60, 180, 172, 0.5);
-          font-size: 1.4rem; }
+        font-size: 1.6rem;
+        margin-left: 2rem; }
+        @media only screen and (max-width: 56.25em) {
+          .modal__card--wrap > div .heading--tertiary::after {
+            display: block;
+            margin-left: 0; } }
+  .modal__card--wrap .paragraph {
+    margin-left: calc(3rem + 13px); }
+  .modal__card--wrap .amount-left--desktop {
+    margin-left: auto; }
+    @media only screen and (max-width: 56.25em) {
+      .modal__card--wrap .amount-left--desktop {
+        display: none; } }
+  .modal__card--wrap .amount-left--phone {
+    display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .modal__card--wrap .amount-left--phone {
+        display: block;
+        margin-left: calc(3rem + 13px); } }
+  .modal__card--wrap .amount-left__num {
+    font-weight: 700;
+    font-size: 2rem;
+    color: black; }
+  .modal__card--wrap .amount-left__text {
+    font-size: 1.2rem;
+    position: relative;
+    top: -2px; }
   .modal__card--extension {
     border-top: 1px solid rgba(60, 180, 172, 0.5);
     margin: 0 -3rem -3rem;
     padding: 3rem;
     display: flex;
-    align-items: center; }
-    .modal__card--extension .btn--donate {
+    align-items: center;
+    justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .modal__card--extension {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; } }
+    .modal__card--extension .extension__buttons {
       display: flex;
-      align-items: center;
-      margin-left: auto;
-      margin-right: 1rem;
+      gap: 2rem;
+      align-items: center; }
+    .modal__card--extension .btn--donate {
       cursor: pointer;
       border: 1px solid rgba(60, 180, 172, 0.5);
-      padding: 1rem;
+      padding: 1rem 2rem;
       border-radius: 2.8rem; }
       .modal__card--extension .btn--donate input {
         width: 4rem;
@@ -252,9 +271,8 @@ body {
         .modal__card--extension .btn--donate input::-webkit-outer-spin-button, .modal__card--extension .btn--donate input::-webkit-inner-spin-button {
           -webkit-appearance: none;
           margin: 0; }
-    .modal__card--extension label {
-      display: block;
-      padding: 1rem 0; }
+    .modal__card--extension label a {
+      display: block; }
   .modal__back-project {
     position: relative; }
     .modal__back-project > * {
@@ -361,7 +379,7 @@ body {
     height: 3rem;
     position: relative;
     cursor: pointer;
-    transition: all 0.1;
+    transition: all 0.2s;
     display: none; }
     @media only screen and (max-width: 56.25em) {
       .navigation__button {
@@ -384,9 +402,9 @@ body {
       transition: all 0.3s;
       background-color: white; }
     .navigation__icon::after {
-      top: -0.9rem; }
+      top: -1rem; }
     .navigation__icon::before {
-      top: 0.9rem; }
+      top: 1rem; }
   .navigation__checkbox:checked ~ .navigation__button > .navigation__icon {
     background-color: transparent; }
   .navigation__checkbox:checked ~ .navigation__button > .navigation__icon::after {
@@ -399,7 +417,8 @@ body {
 .hero-img img {
   object-fit: cover;
   display: block;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
 
 body > .section {
   margin-top: -15rem;

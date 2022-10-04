@@ -13,43 +13,65 @@
 
   &__card {
     &--wrap {
-      display: flex;
-      input {
-        align-self: flex-start;
-        margin-right: 2rem;
-        position: relative;
-        top: 0.5rem;
-      }
+      & > div {
+        display: flex;
 
-      .heading--tertiary {
-        position: relative;
-
-        &:hover {
-          color: rgba($modeate-cyan, 0.5);
-          cursor: pointer;
+        input {
+          margin-right: 3rem;
         }
 
-        &::after {
-          position: static;
-          color: rgba($modeate-cyan, 0.5);
-          font-weight: 400;
-          font-size: 1.6rem;
-        }
+        .heading--tertiary {
+          position: relative;
 
-        span {
-          position: absolute;
-          right: 0;
+          &:hover {
+            color: rgba($modeate-cyan, 0.5);
+            cursor: pointer;
+          }
 
           &::after {
-            content: "left";
-            display: inline-block;
-            position: relative;
-            translate: 0 -10%;
-            margin-left: 0.5rem;
             color: rgba($modeate-cyan, 0.5);
-            font-size: 1.4rem;
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-left: 2rem;
+
+            @include respond(tab-port) {
+              display: block;
+              margin-left: 0;
+            }
           }
         }
+      }
+
+      .paragraph {
+        margin-left: calc(3rem + 13px);
+      }
+
+      .amount-left--desktop {
+        margin-left: auto;
+
+        @include respond(tab-port) {
+          display: none;
+        }
+      }
+
+      .amount-left--phone {
+        display: none;
+
+        @include respond(tab-port) {
+          display: block;
+          margin-left: calc(3rem + 13px);
+        }
+      }
+
+      .amount-left__num {
+        font-weight: 700;
+        font-size: 2rem;
+        color: black;
+      }
+      .amount-left__text {
+        font-size: 1.2rem;
+        position: relative;
+        top: -2px;
       }
     }
 
@@ -59,15 +81,25 @@
       padding: 3rem;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .extension__buttons {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
 
       .btn--donate {
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-        margin-right: 1rem;
         cursor: pointer;
         border: 1px solid rgba($modeate-cyan, 0.5);
-        padding: 1rem;
+        padding: 1rem 2rem;
         border-radius: 2.8rem;
 
         input {
@@ -84,9 +116,9 @@
           }
         }
       }
-      label {
+
+      label a {
         display: block;
-        padding: 1rem 0;
       }
     }
   }

@@ -12,11 +12,12 @@
       color: rgba($modeate-cyan, 0.5);
       font-weight: 400;
       font-size: 1.6rem;
+    }
 
-      @include respond(tab-port) {
-        left: 0;
-        top: 150%;
-      }
+    @include respond(tab-port) {
+      position: relative;
+      left: 0;
+      top: 150%;
     }
   }
 
