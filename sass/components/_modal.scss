@@ -60,6 +60,14 @@
         @include respond(tab-port) {
           display: block;
           margin-left: calc(3rem + 13px);
+
+          .amount-left__num {
+            font-size: 3rem;
+          }
+          .amount-left__text {
+            font-size: 1.5rem;
+            top: -3px;
+          }
         }
       }
 
@@ -159,12 +167,19 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 5%;
     left: 0;
     background-color: rgba(128, 128, 128, 0.39);
 
     .message {
       text-align: center;
-      max-width: 40rem;
+      max-width: 60rem;
+      margin: auto;
+
+      .btn {
+        padding: 2rem 4rem;
+        display: inline-block;
+      }
     }
   }
 }

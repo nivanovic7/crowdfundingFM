@@ -18,8 +18,8 @@
     <title>Title</title>
   </head>
   <body>
-    <div class="modal">
-      <div class="modal__back-project section">
+    <div class="modal u-hide">
+      <div class="modal__back-project section u-hide">
         <a href="#" class="close-btn">&#x2715;</a>
         <h2 class="heading--secondary">Back this project</h2>
         <p class="paragraph">
@@ -30,7 +30,12 @@
         <div class="modal__card">
           <div class="modal__card--wrap">
             <div class="u-margin-bottom-small">
-              <input type="radio" name="radio-btn" id="pledge-edition" />
+              <input
+                type="radio"
+                name="radio-btn"
+                id="pledge-edition"
+                class="input-radio-button"
+              />
               <label for="pledge-edition">
                 <h3 class="heading--tertiary">Pledge with no reward</h3>
               </label>
@@ -46,12 +51,20 @@
               <span class="amount-left__text">left</span>
             </div>
           </div>
+          <!-- <div class="modal__card--extension u-hide">
+           
+          </div> -->
         </div>
 
         <div class="modal__card">
           <div class="modal__card--wrap">
             <div class="u-margin-bottom-small">
-              <input type="radio" name="radio-btn" id="bamboo-edition" />
+              <input
+                type="radio"
+                name="radio-btn"
+                id="bamboo-edition"
+                class="input-radio-button"
+              />
               <label for="bamboo-edition">
                 <h3 class="heading--tertiary">Bamboo with no reward</h3>
               </label>
@@ -70,7 +83,7 @@
               <span class="amount-left__text">left</span>
             </div>
           </div>
-          <div class="modal__card--extension">
+          <div class="modal__card--extension u-hide">
             <span>Enter you pledge</span>
             <div class="extension__buttons">
               <div class="btn--donate">
@@ -85,7 +98,12 @@
         <div class="modal__card">
           <div class="modal__card--wrap">
             <div class="u-margin-bottom-small">
-              <input type="radio" name="radio-btn" id="white-edition" />
+              <input
+                type="radio"
+                name="radio-btn"
+                id="white-edition"
+                class="input-radio-button"
+              />
               <label for="white-edition">
                 <h3 class="heading--tertiary">Pledge with white</h3>
               </label>
@@ -104,7 +122,7 @@
               <span class="amount-left__text">left</span>
             </div>
           </div>
-          <div class="modal__card--extension">
+          <div class="modal__card--extension u-hide">
             <span>Enter you pledge</span>
             <div class="extension__buttons">
               <div class="btn--donate">
@@ -119,7 +137,12 @@
         <div class="modal__card u-faded">
           <div class="modal__card--wrap">
             <div class="u-margin-bottom-small">
-              <input type="radio" name="radio-btn" id="black-edition" />
+              <input
+                type="radio"
+                name="radio-btn"
+                id="black-edition"
+                class="input-radio-button"
+              />
               <label for="black-edition">
                 <h3 class="heading--tertiary">Black edition</h3>
               </label>
@@ -138,7 +161,7 @@
               <span class="amount-left__text">left</span>
             </div>
           </div>
-          <div class="modal__card--extension">
+          <div class="modal__card--extension u-hide">
             <span>Enter you pledge</span>
             <div class="extension__buttons">
               <div class="btn--donate">
@@ -153,7 +176,7 @@
       </div>
 
       <div class="modal__thanks u-hide">
-        <div class="message section">
+        <div class="message section u-margin-top-big">
           <img
             class="u-margin-bottom-medium"
             src="./images/icon-check.svg"
@@ -162,7 +185,7 @@
           <h2 class="heading--secondary u-margin-bottom-small">
             Thank you for your support!
           </h2>
-          <p class="paragraph u-margin-bottom-medium">
+          <p class="paragraph u-margin-bottom-big">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
             cumque aut sapiente quos, harum neque?Lorem ipsum dolor sit amet.
           </p>
